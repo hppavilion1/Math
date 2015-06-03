@@ -13,12 +13,14 @@ class point:
 
         self.size = size
 
+        self.color = color #The color of the image
+
         self.shownX = self.x+graphWidth/2
         self.shownY = graphHeight-(self.y+graphHeight/2)
         self.draw()
 
     def draw(self):
-        graph.create_oval(self.shownX-self.size/2, self.shownY+self.size/2, self.shownX+self.size/2, self.shownY-self.size/2, fill='red', outline='red')
+        graph.create_oval(self.shownX-self.size/2, self.shownY+self.size/2, self.shownX+self.size/2, self.shownY-self.size/2, fill=self.color, outline=self.color)
 
 class line:
     def __init__(self, (p1, p2)):
